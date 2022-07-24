@@ -8,7 +8,7 @@ end
 
 And(/^I fill in registration form$/) do
   find('#first_name').set 'Jason'
-  find('#last_name').set 'Doe'
+  find('#last_name').set 'Bourne'
   find('#month').set '01'
   find('#day').set '01'
   find('#year').set '1977'
@@ -34,7 +34,7 @@ And(/^I finish an open member creation$/) do
   find('#resident_state').select 'Connecticut'
   #find('#resident_zipcode').set '06901'
   find('#primaryPhoneNumber-spnf-spnf-phone-number').click.set '555-555-5555'
-  find('#username').set 'jdoe'
+  find('#username').set 'jbourne'
   find('#password').set '1qaz2wsx3edc'
   find('#password_confirmation').set '1qaz2wsx3edc'
   find('#security_question_id_1').select "Father's Middle Name"
@@ -52,6 +52,7 @@ And(/^I finish an open member creation$/) do
   find('#billing_address_state').select 'Connecticut'
   find('#billing_address_postal').set '11111'
   find('#submit').click
+  sleep 5
 end
 
 Then(/^I see the 'Get Started' page$/) do

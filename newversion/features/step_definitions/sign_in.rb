@@ -22,5 +22,5 @@ find(:xpath, "/html[1]/body[1]/div[1]/main[1]/div[1]/section[1]/div[2]/div[1]/fo
 end
 
 Then(/^I logged as a user$/) do
-  expect(page).to have_content 'Good Morning'
+  expect(page).to have_content 'Good '
 end
