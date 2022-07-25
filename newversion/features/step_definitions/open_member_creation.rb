@@ -1,28 +1,31 @@
 Given(/^I am on the landing page$/) do
-  visit 'https://member.whoami-integration.integration.teladoc.io/signin'
+  @sign_in_page = SignInPage.new
+  @sign_in_page.load
 end
 
 When(/^I click the 'Get Started' button$/) do
-  find(:xpath, "//a[contains(text(),'Get Started')]").click
+  # find(:xpath, "//a[contains(text(),'Get Started')]").click
+  @sign_in_page.get_started_button.click
 end
 
 And(/^I fill in registration form$/) do
-  find('#first_name').set 'Jason'
-  find('#last_name').set 'Bourne'
-  find('#month').set '01'
-  find('#day').set '01'
-  find('#year').set '1977'
-  #find('#country_cd').select 'United State of America'
-  find('#postal').set '06901'
-  find('#email_address').set 'open1234@mail.com'
-  find('#language').select 'Arabic'
-  find('#gender').select 'Other'
-  find(:xpath, "//label[contains(text(),'I have a Teladoc Promo Code.')]").click
-  find('#promo_code').set 'td_trial'
+  @get_started_page = GetStartedPage.new
+  @get_started_page.load
+  @get_started_page.first_name_field.set 'Jane'
+  @get_started_page.last_name_field.set 'Smith'
+  @get_started_page.month_field.set '01'
+  @get_started_page.day_field.set '01'
+  @get_started_page.year_field.set '2000'
+  @get_started_page.postal_field.set '06901'
+  @get_started_page.email_address_field.set 'open1234@mail.com'
+  @get_started_page.language_field.select 'Arabic'
+  @get_started_page.gender_field.select 'Other'
+  @get_started_page.promo_code_check_box.click
+  @get_started_page.promo_code_field.set 'td_trial'
 end
 
 And(/^I click the 'Continue' register button$/) do
-  find(:xpath, "//span[contains(text(),'Continue')]").click
+  @get_started_page.continue_registration_button.click
 end
 
 And(/^I finish an open member creation$/) do
@@ -30,9 +33,7 @@ And(/^I finish an open member creation$/) do
   find('#resident_address_line1').set '555, Open street'
   find('#resident_address_line2').set 'Apt 8512'
   find('#resident_city').set 'New Haven'
-  #find('#resident_country_cd').select 'United State of America'
   find('#resident_state').select 'Connecticut'
-  #find('#resident_zipcode').set '06901'
   find('#primaryPhoneNumber-spnf-spnf-phone-number').click.set '555-555-5555'
   find('#username').set 'jbourne'
   find('#password').set '1qaz2wsx3edc'
@@ -52,7 +53,6 @@ And(/^I finish an open member creation$/) do
   find('#billing_address_state').select 'Connecticut'
   find('#billing_address_postal').set '11111'
   find('#submit').click
-  sleep 5
 end
 
 Then(/^I see the 'Get Started' page$/) do
