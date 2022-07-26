@@ -4,7 +4,7 @@ class GetStartedPage <SitePrism::Page
   element :sign_in_link, :xpath, "//a[contains(text(),'sign in')]"
   element :first_name_field, '#first_name'
   element :last_name_field, '#last_name'
-  element :first_name_field, '#first_name'
+  # element :first_name_field, '#first_name'
   element :month_field, '#month'
   element :day_field, '#day'
   element :year_field, '#year'

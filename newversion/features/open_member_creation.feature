@@ -9,8 +9,8 @@ Feature: Open member creation
     When I click the 'Get Started' button
     And I fill in registration form
     And I click the 'Continue' register button
-#    And I finish an open member creation
-#    Then I see the 'Get Started' page
+    And I finish an open member creation
+    Then I see the 'Confirm' page'
 
     # When I fill in log in form with valid credentials
     # And I click login button
