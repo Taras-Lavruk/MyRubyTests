@@ -6,15 +6,15 @@ class SignInPage <SitePrism::Page
   element :login_username_field, '#login_username'
   element :login_password_field, '#login_password'
 
-  def login_username_field
-    # code here
-  end
-
-  def login_password_field
-    # code here
-  end
-
-  def sign_in_button
-    # code here
-  end
+#   def login_username_field
+#
+#   end
+#
+#   def login_password_field
+#     login_password_field
+#   end
+#
+#   def sign_in_button
+#     sign_in_button
+#   end
 end

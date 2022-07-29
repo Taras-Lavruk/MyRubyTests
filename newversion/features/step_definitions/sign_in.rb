@@ -20,8 +20,12 @@ And(/^I click login button$/) do
   @sign_in_page.sign_in_button.click
 end
 
-Then(/^I logged as a user$/) do
-  @account_info_page = AccountInfoPage.new
-  @account_info_page
+Then(/^I am on member's page$/) do
+  # @account_info_page = AccountInfoPage.new
+  # @account_info_page
   expect(page).to have_content 'Good '
+end
+
+Given(/^I am logged in member$/) do
+  login_member
 end
