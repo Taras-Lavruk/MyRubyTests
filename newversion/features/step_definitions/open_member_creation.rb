@@ -1,21 +1,19 @@
 Given(/^I am on the landing page$/) do
-  @sign_in_page = SignInPage.new
-  @sign_in_page.load
-  # expect(page).to have_context 'Sign in to your account'
+  @get_started_page = GetStartedPage.new
+  @get_started_page.load
+  # expect(page).to have_context 'Care is just a few steps away'
 end
 
-When(/^I click the 'Get Started' button$/) do
-  # find(:xpath, "//a[contains(text(),'Get Started')]").click
-  # @sign_in_page = SignInPage.new
-  # @sign_in_page.load
-  @sign_in_page.get_started_button.click
+When(/^I am on 'Get started' page I see...$/) do
+  expect(current_url).to include '/get_started'
+  # expect(page).to have_context 'Care is just a few steps away'
+  # expect(page).to have_content 'FIRST NAME'
+  # expect(page).to have_content 'Last NAME'
 end
 
 And(/^I fill in registration form$/) do
-  @get_started_page = GetStartedPage.new
-  @get_started_page.load
-  @get_started_page.first_name_field.set 'howard'
-  @get_started_page.last_name_field.set 'Lee'
+  @get_started_page.first_name_field.set 'dwane'
+  @get_started_page.last_name_field.set 'johnsson'
   @get_started_page.month_field.set '01'
   @get_started_page.day_field.set '01'
   @get_started_page.year_field.set '2000'
@@ -40,7 +38,7 @@ And(/^I finish an open member creation$/) do
   @account_info_page.resident_city_field.set 'New Haven'
   @account_info_page.resident_state_field.select 'Connecticut'
   @account_info_page.primary_phone_number_field.click.set '222-222-2222'
-  @account_info_page.username_field.set 'hlee'
+  @account_info_page.username_field.set 'djohnsson'
   @account_info_page.password_field.set 'test123456'
   @account_info_page.password_confirmation_field.set 'test123456'
   @account_info_page.security_question_id_1_dropdown.select "Father's Middle Name"
@@ -58,11 +56,10 @@ And(/^I finish an open member creation$/) do
   @account_info_page.billing_address_state_field.select 'Connecticut'
   @account_info_page.billing_address_postal_field.set '11111'
   @account_info_page.submit_button.click
-  sleep 14
 end
 
 Then(/^I see the 'Confirm' page'$/) do
-  @registration_confirmation_page = RegistrationConfirmationPage.new
-  @registration_confirmation_page.load
+  # @registration_confirmation_page = RegistrationConfirmationPage.new
+  # @registration_confirmation_page.load
   expect(page).to have_text "Welcome to 24/7 care"
 end

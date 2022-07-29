@@ -5,4 +5,16 @@ class SignInPage <SitePrism::Page
   element :get_started_button, 'body.signin.responsive.logged_out:nth-child(2) div.login-section--wrapper:nth-child(1) section.login-screen div.row div.small-6.columns:nth-child(2) > a.button.baseline.purple.start_registration:nth-child(4)'
   element :login_username_field, '#login_username'
   element :login_password_field, '#login_password'
+
+  def login_username_field
+    # code here
+  end
+
+  def login_password_field
+    # code here
+  end
+
+  def sign_in_button
+    # code here
+  end
 end
