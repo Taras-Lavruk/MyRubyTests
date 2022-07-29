@@ -24,4 +24,92 @@ class AccountInfoPage <SitePrism::Page
   element :billing_address_state_field, '#billing_address_state'
   element :billing_address_postal_field, '#billing_address_postal'
   element :submit_button, '#submit'
+
+  def resident_address_line1_field
+    # code here
+  end
+
+  def resident_address_line2_field
+    # code here
+  end
+
+  def resident_city_field
+    # code here
+  end
+
+  def resident_state_field
+    # code here
+  end
+
+  def primary_phone_number_field
+    # code here
+  end
+
+  def username_field
+    # code here
+  end
+
+  def password_confirmation_field
+    # code here
+  end
+
+  def security_question_id_1_dropdown
+    # code here
+  end
+
+  def security_question_response_1_field
+    # code here
+  end
+
+  def security_question_id_2_dropdown
+    # code here
+  end
+
+  def security_question_response_2_field
+    # code here
+  end
+
+  def security_question_id_3_dropdown
+    # code here
+  end
+
+  def security_question_response_3_field
+    # code here
+  end
+
+  def billing_card_type_dropdown
+    # code here
+  end
+
+  def billing_card_number_field
+    # code here
+  end
+
+  def billing_expiration_month_dropdown
+    # code here
+  end
+
+  def billing_expiration_year_dropdown
+    # code here
+  end
+
+  def billing_address_line1_field
+    # code here
+  end
+
+  def billing_address_city_field
+    # code here
+  end
+
+  def billing_address_state_field
+    # code here
+  end
+
+  def billing_address_postal_field
+    # code here
+  end
+
+  def submit_button
+    # code here
+  end
 end

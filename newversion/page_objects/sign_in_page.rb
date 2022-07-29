@@ -17,4 +17,15 @@ class SignInPage <SitePrism::Page
 #   def sign_in_button
 #     sign_in_button
 #   end
+  def login_username_field
+    # code here
+  end
+
+  def login_password_field
+    # code here
+  end
+
+  def sign_in_button
+    # code here
+  end
 end

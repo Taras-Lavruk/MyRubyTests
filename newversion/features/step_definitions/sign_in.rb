@@ -26,6 +26,6 @@ Then(/^I am on member's page$/) do
   expect(page).to have_content 'Good '
 end
 
-Given(/^I am logged in member$/) do
-  login_member
+Given(/^I am logged in as a "([^"]*)"$/) do |user_name|
+  login user_name, 'test123456'
 end

@@ -15,4 +15,52 @@ class GetStartedPage <SitePrism::Page
   element :promo_code_check_box, 'body.registration.foundation-style.index.white-label.responsive:nth-child(2) div.row.registration-wrapper:nth-child(1) div.main_left:nth-child(2) div.row div.module.progressive.personal_information.medium-9.medium-centered.large-9.large-centered div.f1b76ey0.registration-form-container div.fngxb1j.foundation-style div.f1vfyt1j.foundation-style.fo077u4 div.fngxb1j.foundation-style:nth-child(2) div.f1vfyt1j.foundation-style.fo077u4 form.f1b76ey0.form-container div.fngxb1j.foundation-style.promo-code-container:nth-child(8) div.f1vfyt1j.foundation-style.fo077u4 div:nth-child(1) div.f1f1ygnm > label:nth-child(2)'
   element :promo_code_field, '#promo_code'
   element :continue_registration_button, '#continue-registration-button'
+
+  def first_name_field
+    # code here
+  end
+
+  def last_name_field
+    # code here
+  end
+
+  def month_field
+    # code here
+  end
+
+  def day_field
+    # code here
+  end
+
+  def year_field
+    # code here
+  end
+
+  def postal_field
+    # code here
+  end
+
+  def email_address_field
+    # code here
+  end
+
+  def language_field
+    # code here
+  end
+
+  def gender_field
+    # code here
+  end
+
+  def promo_code_check_box
+    # code here
+  end
+
+  def promo_code_field
+    # code here
+  end
+
+  def continue_registration_button
+    # code here
+  end
 end
